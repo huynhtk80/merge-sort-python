@@ -8,13 +8,16 @@ def merge_sort(arr):
 
     merge_sort(left_arr)
     merge_sort(right_arr)
+    merge(left_arr, right_arr, arr)
 
+    
+
+def merge(left_arr, right_arr, arr):
     i=0 # left_arr idx
     j=0 # right_arr idx
     k=0 # merged array
 
     while i< len(left_arr) and j < len(right_arr):
-        print(arr)
         if left_arr[i] < right_arr [j]:
             arr[k] = left_arr[i]
             i += 1
@@ -32,6 +35,7 @@ def merge_sort(arr):
         arr[k] = right_arr[j]
         j += 1
         k += 1
+
 
 if __name__ == '__main__':
     print("hi")
